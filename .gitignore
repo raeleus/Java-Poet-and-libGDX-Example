@@ -30,6 +30,8 @@ www-test/
 *.iml
 /android/out/
 com_crashlytics_export_strings.xml
+/automation/out/
+/desktop/out/
 
 ## Eclipse
 
