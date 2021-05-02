@@ -76,8 +76,8 @@ public class Core extends ApplicationAdapter {
                 sfxExcuseMe.play();
             } else if (y > Gdx.graphics.getHeight()) {
                 deltaY *= -1;
-                region = regionShocked;
-                sfxExcuseMe.play();
+                region = regionExclaim;
+                sfxHey.play();
             }
             
             x += deltaX * delta;
