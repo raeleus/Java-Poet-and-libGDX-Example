@@ -1,0 +1,34 @@
+
+textures.png
+size: 512, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+balloon
+  rotate: false
+  xy: 1, 1
+  size: 65, 128
+  orig: 65, 128
+  offset: 0, 0
+  index: -1
+exclaim
+  rotate: false
+  xy: 1, 131
+  size: 104, 136
+  orig: 104, 136
+  offset: 0, 0
+  index: -1
+shocked
+  rotate: false
+  xy: 139, 339
+  size: 96, 129
+  orig: 96, 129
+  offset: 0, 0
+  index: -1
+upset
+  rotate: false
+  xy: 1, 269
+  size: 136, 199
+  orig: 136, 199
+  offset: 0, 0
+  index: -1
