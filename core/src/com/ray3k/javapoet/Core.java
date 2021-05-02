@@ -9,6 +9,8 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ScreenUtils;
 
+import static com.ray3k.javapoet.Resources.*;
+
 public class Core extends ApplicationAdapter {
     SpriteBatch spriteBatch;
     Array<Entity> entities;
@@ -18,6 +20,7 @@ public class Core extends ApplicationAdapter {
     public void create () {
         spriteBatch = new SpriteBatch();
         entities = new Array<>();
+        loadAssets();
         
         for (int i = 0; i < 15; i++) {
             Entity entity = new Entity();
@@ -27,7 +30,7 @@ public class Core extends ApplicationAdapter {
             entity.y = 10 + MathUtils.random(Gdx.graphics.getHeight() - 20);
             entity.deltaX = temp.x;
             entity.deltaY = temp.y;
-            entity.region = ;
+            entity.region = regionBalloon;
             entities.add(entity);
         }
     }
@@ -59,22 +62,22 @@ public class Core extends ApplicationAdapter {
         public void act(float delta) {
             if (x < 0) {
                 deltaX *= -1;
-                region = ;
-                .play();
+                region = regionBalloon;
+                sfxFart.play();
             } else if (x > Gdx.graphics.getWidth()) {
                 deltaX *= -1;
-                region = ;
-                .play();
+                region = regionUpset;
+                sfxGrunt.play();
             }
             
             if (y < 0) {
                 deltaY *= -1;
-                region = ;
-                .play();
+                region = regionShocked;
+                sfxExcuseMe.play();
             } else if (y > Gdx.graphics.getHeight()) {
                 deltaY *= -1;
-                region = ;
-                .play();
+                region = regionShocked;
+                sfxExcuseMe.play();
             }
             
             x += deltaX * delta;

@@ -50,6 +50,18 @@ project(":desktop") {
     }
 }
 
+project(":automation") {
+    apply plugin: "java-library"
+
+
+    dependencies {
+        api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        api 'com.squareup:javapoet:1.13.0'
+
+    }
+}
+
 project(":core") {
     apply plugin: "java-library"
 
